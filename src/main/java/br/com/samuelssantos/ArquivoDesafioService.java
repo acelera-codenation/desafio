@@ -6,10 +6,9 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Arrays;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 
 @ApplicationScoped
 public class ArquivoDesafioService {
