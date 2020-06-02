@@ -27,16 +27,6 @@ public class ArquivoDesafioService {
         }
     }
 
-    public RespostaDesafio carregar() throws FileNotFoundException {
-
-        if (!Files.exists(Paths.get(fileName))) throw new FileNotFoundException();
-        try (FileReader reader = new FileReader(fileName)) {
-            return JsonbBuilder.create().fromJson(reader, RespostaDesafio.class);
-        } catch (IOException ex) {
-            throw new IllegalStateException(ex);
-        }
-    }
-
     public byte[] ler() throws IOException {
         FileInputStream fis = new FileInputStream(fileName);
         byte [] content = new byte[fis.available()];
